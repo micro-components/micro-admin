@@ -34,8 +34,13 @@ jobs:
     - name: Build Project
       run: pnpm run build  # 确保你的package.json中有构建命令
 
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages  # GitHub Pages使用的分支
-        folder: dist  # Vite构建结果的目录
+    # - name: Deploy to GitHub Pages
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     branch: gh-pages  # GitHub Pages使用的分支
+    #     folder: dist  # Vite构建结果的目录
+    - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN  }}
+          publish_dir: ./dist
