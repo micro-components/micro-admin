@@ -1,11 +1,12 @@
 {
-  "name": "vue-project",
+  "name": "micro-admin",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
+    "build:github": "vite build --base=/micro-admin/",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "nightwatch tests/e2e/*",

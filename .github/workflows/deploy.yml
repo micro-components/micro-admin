@@ -32,7 +32,7 @@ jobs:
       run: pnpm install
 
     - name: Build Project
-      run: pnpm run build  # 确保你的package.json中有构建命令
+      run: pnpm run build:github  # 确保你的package.json中有构建命令
 
     # - name: Deploy to GitHub Pages
     #   uses: JamesIves/github-pages-deploy-action@v4
