@@ -31,11 +31,7 @@ jobs:
 
     - name: Build Project
       run: pnpm run build  # 确保你的package.json中有构建命令
-
-    - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+      
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
