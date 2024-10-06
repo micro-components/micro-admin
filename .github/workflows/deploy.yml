@@ -1,0 +1,43 @@
+name: Deploy Micro Admin to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 或者你用于生产部署的分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+          fetch-depth: 0 # Not needed if lastUpdated is not enabled
+     # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: 9.0.6 # 指定您需要的 pnpm 版本号
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'  # 指定Node.js版本
+        cache: pnpm
+
+    - name: Install Dependencies
+      run: pnpm install
+
+    - name: Build Project
+      run: pnpm run build  # 确保你的package.json中有构建命令
+
+    - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages  # GitHub Pages使用的分支
+        folder: dist  # Vite构建结果的目录
