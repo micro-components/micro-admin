@@ -1,7 +1,28 @@
 {
   "name": "micro-admin",
-  "version": "0.0.0",
+  "description": "一个基于微服务的中后台管理系统MicroAdmin",
+  "keywords": [
+    "vite5",
+    "vue3",
+    "vue-router",
+    "setup",
+    "typescript5",
+    "pinia",
+    "ant-design-vue",
+    "micro-admin",
+    "template"
+  ],
+  "homepage": "https://micro-components.github.io/micro-admin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/micro-components/micro-admin.git"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
