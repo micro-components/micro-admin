@@ -1,3 +1,11 @@
+/*
+ * @Author: xunzhaotech
+ * @Email: luyb@xunzhaotech.com
+ * @QQ: 1525572900
+ * @Date: 2024-10-06 11:18:37
+ * @LastEditTime: 2024-10-06 19:57:37
+ * @LastEditors: xunzhaotech
+ */
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -14,6 +22,7 @@ export default defineConfig({
     nightwatchPlugin(),
     vueDevTools(),
   ],
+  base: "/micro-admin/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
