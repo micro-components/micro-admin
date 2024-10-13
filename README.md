@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Micro-Admin" width="120" height="120" src="./src/assets/logo.png">
+  <img alt="Micro-Admin" width="180" height="180" src="./src/assets/logo.png">
   <h1>Micro-Admin</h1>
   <span>English | <a href="./README.zh-CN.md">中文</a></span>
 </div>
