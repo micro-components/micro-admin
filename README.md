@@ -1,4 +1,11 @@
-# Micro-Admin
+<div align="center">
+  <img alt="Micro-Admin" width="120" height="120" src="./src/assets/logo.png">
+  <h1>Micro-Admin</h1>
+  <span>English | <a href="./README.zh-CN.md">中文</a></span>
+</div>
+
+## ⚡ Introduction
+Micro-Admin is a free and open source middle and background management system basic solution, based on mainstream framework such as Vue3, TypeScript, Element Plus, Pinia and Vite
 
 This template should help get you started developing with Vue 3 in Vite.
 
